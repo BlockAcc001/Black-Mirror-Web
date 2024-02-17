@@ -37,3 +37,15 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     });
 });
+
+//header scroll
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('shadow');
+    } else {
+        header.classList.remove('shadow');
+    }
+});
+
