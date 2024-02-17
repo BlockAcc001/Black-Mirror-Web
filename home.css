@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -60,7 +62,7 @@ header .navigation .navigation-items a:hover{
     font-size: 1.1em;
 }
 section{
-    padding: 100px 200px;
+    padding: 30vh 10vw
 }
 .home{
     position: relative;
@@ -74,7 +76,7 @@ section{
 .home::before{
     z-index: 777;
     content: '';
-    position: absolute;
+    position: fixed;
     background: rgba(0, 0, 0, 0.485);
     width: 100%;
     height: 100%;
@@ -124,6 +126,7 @@ section{
     backdrop-filter: blur(10px);
     box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
     transition: 0.3s ease;
+    display: ruby;
 }
 .home .content a:hover{
     background: #1d1d1d;
@@ -133,7 +136,7 @@ section{
 }
 .home video{
     z-index: 000;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -178,22 +181,21 @@ section{
 }
 .video-slide.active{
     clip-path: circle(150% at 50% 100%);
-    transition: 1.5s ease;
+    transition: 1.9s ease;
     transition-property: clip-path;
 }
 
-
-@media(max-width: 1220px){
+@media(max-width: 2000px){
     .home{
-        padding-top: 15%;
+        padding-top: 25vh;
     }
+}
+@media(max-width: 1220px){
+    
 }
 @media(max-width: 1040px){
     header{
         padding: 12px 20px;
-    }
-    section{
-        padding: 100px 20px;
     }
     header .navigation{
         display: none;
@@ -215,9 +217,9 @@ section{
         margin: 1%;
     }
     header .navigation.active .navigation-items {
-        background: rgba(0, 0, 0, 0.329);
+        background: rgb(0 0 0 / 48%);
         border: 2px solid rgba(255, 255, 255, 0.197);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
         width: 600px;
         max-width: 600px;
         margin: 5vmin;
@@ -268,9 +270,7 @@ section{
     }
 }
 @media(max-width:821px){
-    .home{
-        padding-top: 17vh;
-    }
+    
     .home .episode-section {
         padding: 30px;
     }
@@ -281,6 +281,11 @@ section{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, auto));
         gap: 1rem;
+    }
+}
+@media(max-width: 585px){
+    .home .content h1{
+        font-size: 3em;
     }
 }
 @media(max-width: 450px){
@@ -296,6 +301,9 @@ section{
         width: 90%;
         margin-left: 5%;
     }
+    .home .content h1{
+        font-size: 2em;
+    }
 }
 @media(max-width: 415px){
     header{
@@ -306,9 +314,7 @@ section{
     header .logo img{
         width: 125px;
     }
-    .home {
-        padding-top: 12vh;
-    }
+    
     .home .episode-section{
         display: block;
         margin-right: 5%;
@@ -316,31 +322,48 @@ section{
         align-self: center;
     }
 }
-@media(max-width: 510px){
-    .home .content h1{
-        font-size: 3em;
-    }
-}
+
 @media(max-width: 380px){
     .home .content h1{
         font-size: 2em;
     }
 }
-@media(max-width: 326px){
+@media(max-width: 328px){
     .home .content h1{
         font-size: 1em;
+        letter-spacing: 1px;
+        line-height: normal;
+        margin-bottom: auto;
     }
+    .home .content a{
+        padding: 5px 15px;
+        font-size: .7em;
+    }
+    .home .content p{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    .home .content {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: fit-content;
+    }
+
 }
 @media(max-width: 250px){
     header .logo{
         display: none;
     }
-
+    
 }
 
 @media(min-width: 2000px){
     .home{
-        padding-top: 0;
+        padding-top: 26vh;
     }
     .home .dis h1{
         font-size: 30px;
