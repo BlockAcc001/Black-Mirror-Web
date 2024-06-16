@@ -550,6 +550,25 @@
                 <p>&#169; Created by Theekshana Yugan. 2024 All Right Reseverd.</p>
             </div>
         </section>
+        <script>
+            function checkConnection() {
+                if (!navigator.onLine) {
+                    alert('You are currently offline. Please check your internet connection.');
+                }
+            }
+
+            // Check connection status when the page loads
+            window.addEventListener('load', checkConnection);
+
+            // Listen for offline and online events
+            window.addEventListener('offline', function() {
+                alert('You are currently offline. Please check your internet connection.');
+            });
+
+            window.addEventListener('online', function() {
+                alert('You are back online.');
+            });
+        </script>
         
         <script src="script.js"></script>
     </body>
